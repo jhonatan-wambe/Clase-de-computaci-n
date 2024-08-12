@@ -1,0 +1,28 @@
+PYTHON
+
+'''
+como nos afecta la nueva reforma pensional, hacer un programa que nos ayude a saber cuantas
+semanas se necesitan para poder tener pension
+'''
+
+print(" Digite 0 Femenino |  1 Masculino")
+sexo = int(input(" Ingrese el sexo: "))
+if (sexo == 0):
+    Numsemanas = 1300
+    print("Digite 1 Si |  2 No")
+    hijos = int(input("¿Tiene hijos? "))
+    if (hijos == 1):
+        Numhijos = int(input("Cuantos hijos tiene: "))
+        RangoNumhijos = min(3, Numhijos)
+        Numsemanas = 1000 - (RangoNumhijos * 50)
+        print("Resultado Femenino")
+        print(f"Usted necesita {Numsemanas} semanas ")
+    else:
+        print("Resultado Femenino")
+        print(f"Usted necesita 1000 semanas ")
+else:
+    Numsemanas = 1300
+    print("Resultado Masculino")
+    print(f"Usted necesita {Numsemanas} semanas ")
+    
+    
