@@ -20,7 +20,7 @@ int main()
     }else{
         cout<<"\nTiro secundario..";
         cout<<"\nLanzando dados ";
-        val2 = rand() % 12 + 1;
+        val2 = rand() % 12 + 1; // Genera un número entre 1 y 12
         cout<<"\nNumero de dados: "<<val2;
         if(val2 == 7 ){
             cout<<"\nEl jugador Perdio";
