@@ -1,0 +1,87 @@
+// calcular operaciones 
+
+#include <iostream>
+using namespace std;
+
+void leer_m(int m[][4]){
+    for (int i=0; i<3; i++){
+        for(int j=0; j<4; j++){
+            // Ingresa datos ala matriz
+            cout<<"m["<<i<<"]["<<j<<"]= ";
+            cin>>m[i][j];
+        }
+    }
+}
+
+void operacione_m(int m[][4]){
+    int sumai=0, contadorp=0;
+    double sumap = 0, promedio;
+    for (int i=0; i<3; i++){
+        for(int j=0; j<4; j++){
+            // Ingresa datos ala matriz
+            cout<<"m["<<i<<"]["<<j<<"]= ";
+            cin>>m[i][j];
+            
+            if (m[i][j] % 2 == 0){
+                sumap = sumap+m[i][j];
+                contadorp = contadorp+1;
+            }
+            else{
+                sumai = sumai+m[i][j];
+            }
+        }
+    }
+    promedio = sumap/contadorp;
+    cout<<"El promedio es: "<<promedio<<endl;
+    cout<<"La suma es "sumai<<endl;
+}
+
+
+int main()
+{
+    int m[3][4], i, j;
+    leer_m(m);
+    operacione_m(m);
+    
+    // imprimir  matriz
+    for (i=0; i<3; i++){
+        for(j=0; j<4; j++){
+            cout<<m[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    // imprimir promedio par
+    cout<<promedio;
+    return 0;
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int m[3][4], i, j;
+    // llenamos la matrix
+    for (i=0; i<3; i++){
+        for(j=0; j<4; j++){
+            cout<<"m["<<i<<"]["<<j<<"]= ";
+            cin>>m[i][j];
+        }
+    }
+    // imprimir 
+    
+    for (i=0; i<3; i++){
+        for(j=0; j<4; j++){
+            cout<<m[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    
+
+    return 0;
+}
